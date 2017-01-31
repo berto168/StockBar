@@ -1,11 +1,13 @@
 import React from 'react'
 import Drink from './Drink'
+import Price from './Price'
 
 function List(props) {
 
   const drink_rows = props.data.drinks.map((drink) =>
   <li key={drink.name}>
-    <Drink data={drink} />
+    <Drink name={drink.name} />
+    <Price prices={drink.price} />
   </li>
   )
 

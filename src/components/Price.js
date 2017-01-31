@@ -1,10 +1,12 @@
 import React from 'react'
 
-export default function Price(props) {
+function Price(props) {
 
   return (
     <div className="Price">
-      {props.price}
+      ${props.prices.price.toFixed(2)}
     </div>
   )
 }
+
+export default Price;

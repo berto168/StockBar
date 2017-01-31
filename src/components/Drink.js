@@ -5,7 +5,7 @@ function Drink(props) {
   return (
     <div className="Drink">
       <button>
-        {props.data.name} - ${props.data.price}
+        {props.name}
       </button>
     </div>
   )
