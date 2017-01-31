@@ -1,31 +1,25 @@
-import React, { Component } from "react"
+import React from 'react'
 import List from './List'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { getDrinks } from '../actions/actions'
 
-class Menu extends Component {
+function Menu(props){
 
-  componentWillMount() {
-    this.props.getDrinks()
-  }
+  const lists = props.menu.map((category) =>
+    <td key={category.type} className="three columns">
+      <List data={category} />
+    </td>
+  )
 
-  render() {
-    return (
-      <div className="Menu">
-        <List />
-      </div>
-    )
-  }
+  return (
+    <div className="Menu">
+      <table>
+        <tbody>
+          <tr>
+            {lists}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  )
 }
 
-function mapStatetoProps(state){
-  return state
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({
-    getDrinks
-  }, dispatch)
-}
-export default connect(mapStatetoProps, mapDispatchToProps)(Menu)
+export default Menu;

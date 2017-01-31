@@ -1,15 +1,22 @@
 import React from 'react'
+import Drink from './Drink'
 
-export default function List(props) {
+function List(props) {
+
+  const drink_rows = props.data.drinks.map((drink) =>
+  <li key={drink.name}>
+    <Drink data={drink} />
+  </li>
+  )
 
   return (
     <div className="List">
-      <h3>{props.type}</h3>
+      <h3>{props.data.type}</h3>
       <ul>
-        <li><button>Corona</button></li>
-        <li><button>Sam Adams</button></li>
-        <li><button>Heineken</button></li>
+        {drink_rows}
       </ul>
     </div>
   )
 }
+
+export default List;

@@ -8,8 +8,7 @@ function App(props) {
     <div className="App">
       <h2>Stock Bar</h2>
       <div className="container">
-        {props.children}
-        <Menu />
+        <Menu menu={props.bar}/>
       </div>
     </div>
   )

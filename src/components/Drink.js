@@ -1,14 +1,14 @@
 import React from 'react'
 
-export default function Drink(props) {
+function Drink(props) {
 
   return (
     <div className="Drink">
-      <li>
-        <button>
-          {props.name} - {props.price}
-        </button>
-      </li>
+      <button>
+        {props.data.name} - ${props.data.price}
+      </button>
     </div>
   )
 }
+
+export default Drink;
