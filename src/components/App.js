@@ -1,21 +1,35 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Menu from './Menu'
 import { connect } from 'react-redux'
+import { bindActionCreators} from 'redux'
+import { getDrinks } from '../actions/actions'
 
-function App(props) {
+class App extends Component {
 
-  return (
-    <div className="App">
-      <h2>Stock Bar</h2>
-      <div className="container">
-        <Menu menu={props.bar}/>
+  componentWillMount() {
+    this.props.getDrinks()
+  }
+
+  render () {
+    return (
+      <div className="App">
+        <h2>Stock Bar</h2>
+        <div className="container">
+          <Menu menu={this.props.bar} />
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
-function mapStatetoProps(state){
+function mapStateToProps(state){
   return state
 }
 
-export default connect(mapStatetoProps)(App)
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    getDrinks
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

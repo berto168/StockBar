@@ -1,22 +1,31 @@
-import drinks from '../data/drinks'
+import $ from 'jquery'
 
-export function buyDrink(drink) {
-  return {
-    type: "BUY_DRINK",
-    payload: drink
-  }
-}
+export function getDrinks() {
+  const promise = $.ajax({
+  url: "http://localhost:3000/menu",
+  type: "GET",
+  contentType: "application/json; charset=utf-8",
+  dataType: "json"
+  })
 
-export function addDrink(drink) {
-  return {
-    type: "ADD_DRINK",
-    payload: drink
-  }
-}
-
-export function getDrinks(){
   return {
     type: "GET_DRINKS",
-    payload: drinks
+    payload: promise
   }
 }
+
+export function buyDrink(drink, type) {
+
+  return {
+    type: "BUY_DRINK",
+    payload: { drink, type }
+  }
+}
+
+//
+// export function addDrink(drink) {
+//   return {
+//     type: "ADD_DRINK",
+//     payload: drink
+//   }
+// }

@@ -6,7 +6,7 @@ function List(props) {
 
   const drink_rows = props.data.drinks.map((drink) =>
   <li key={drink.name}>
-    <Drink name={drink.name} />
+    <Drink name={drink.name} type={props.data.type} />
     <Price prices={drink.price} />
   </li>
   )

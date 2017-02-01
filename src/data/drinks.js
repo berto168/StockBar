@@ -1,4 +1,4 @@
-const drinks = [
+var drinks = [
   {
     type:
       "Beer",

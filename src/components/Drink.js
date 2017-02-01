@@ -1,14 +1,36 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators} from 'redux'
+import { buyDrink } from '../actions/actions'
 
-function Drink(props) {
+class Drink extends Component {
 
-  return (
-    <div className="Drink">
-      <button>
-        {props.name}
-      </button>
-    </div>
-  )
+  handleButtonClick(event) {
+    debugger
+    var drink = event.target.textContent
+    var type = event.target.id
+    console.log(this.props)
+    this.props.buyDrink(drink, type)
+  }
+  render () {
+    return (
+      <div className="Drink">
+        <button onClick={this.handleButtonClick} id={this.props.type}>
+          {this.props.name}
+        </button>
+      </div>
+    )
+  }
 }
 
-export default Drink;
+function mapStateToProps(state){
+  return state
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    buyDrink
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Drink)
