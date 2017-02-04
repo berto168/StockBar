@@ -19,10 +19,7 @@ router.get('/', function(req, res) {
 function restructure_drinks(drinks) {
   var categories = []
   for (var i = 0; i < drinks.length; i++) {
-    if (categories.length === 0) {
-      categories.push({type: drinks[i].type, drinks: [drinks[i]]})
-    }
-    else if (categories.find((cat) => cat.type === drinks[i].type)) {
+    if (categories.find((cat) => cat.type === drinks[i].type)) {
       var cat = categories.find((cat) => cat.type === drinks[i].type)
       cat.drinks.push(drinks[i])
     }
