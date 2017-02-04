@@ -1,0 +1,110 @@
+[
+  {
+    "_id": "58955dbdb20e17303b585d11",
+    "name": "Corona",
+    "type": "Beer",
+    "price": {
+      "default": 4,
+      "price": 4
+    }
+  },
+  {
+    "_id": "58955dceb20e17303b585d12",
+    "name": "Heineken",
+    "type": "Beer",
+    "price": {
+      "default": 4,
+      "price": 4
+    }
+  },
+  {
+    "_id": "58955de0b20e17303b585d13",
+    "name": "Stella Artois",
+    "type": "Beer",
+    "price": {
+      "default": 4.25,
+      "price": 4.25
+    }
+  },
+  {
+    "_id": "58955dfbb20e17303b585d14",
+    "name": "Tequila",
+    "type": "Shots",
+    "price": {
+      "default": 5,
+      "price": 5
+    }
+  },
+  {
+    "_id": "58955e04b20e17303b585d15",
+    "name": "Whiskey",
+    "type": "Shots",
+    "price": {
+      "default": 5,
+      "price": 5
+    }
+  },
+  {
+    "_id": "58955e16b20e17303b585d16",
+    "name": "Vodka",
+    "type": "Shots",
+    "price": {
+      "default": 4.5,
+      "price": 4.5
+    }
+  },
+  {
+    "_id": "58955e8e7844c1410ca55361",
+    "name": "Manhattan",
+    "type": "Cocktails",
+    "price": {
+      "default": 6,
+      "price": 6
+    }
+  },
+  {
+    "_id": "58955e9f7844c1410ca55362",
+    "name": "Old Fashioned",
+    "type": "Cocktails",
+    "price": {
+      "default": 7,
+      "price": 7
+    }
+  },
+  {
+    "_id": "58955eae7844c1410ca55363",
+    "name": "Pina Colada",
+    "type": "Cocktails",
+    "price": {
+      "default": 6.5,
+      "price": 6.5
+    }
+  },
+  {
+    "_id": "58955ecd7844c1410ca55364",
+    "name": "Cabernet Sauvignon",
+    "type": "Wine",
+    "price": {
+      "default": 6,
+      "price": 6
+    }
+  },
+  {
+    "_id": "58955ee17844c1410ca55365",
+    "name": "Pinot Noir",
+    "type": "Wine",
+    "price": {
+      "default": 5,
+      "price": 5
+    }
+  },
+  {
+    "_id": "58955ef17844c1410ca55366",
+    "name": "Zinfandel",
+    "type": "Wine",
+    "price": {
+      "default": 6,
+      "price": 6
+    }
+  }
+]

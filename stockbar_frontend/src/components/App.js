@@ -10,16 +10,10 @@ class App extends Component {
     this.props.getDrinks()
   }
 
-  handleClick(event) {
-    debugger
-    console.log(this.props)
-  }
-
   render () {
     return (
       <div className="App">
         <h2>Stock Bar</h2>
-        <button onClick={this.handleClick}>TEST</button>
         <div className="container">
           <Menu menu={this.props.bar} />
         </div>
